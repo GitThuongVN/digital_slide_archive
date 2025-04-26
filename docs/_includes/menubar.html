@@ -2,10 +2,10 @@
 
 <aside class="menu">
 {% for menu in menus %}
-    <p class="menu-label">{{ menu.label }}</p>
+    <p class="menu-label">{{ menu.label | replace: 'Example', 'Ví dụ' | replace: 'Menu', 'Danh mục' | replace: 'System', 'Hệ thống'| replace: 'User', 'Người dùng' | replace: 'Project', 'Dự án' }}</p>
     <ul class="menu-list">
         {% for item in menu.items %}
-        <li>
+        <li>    
             <a href="{{ item.link }}" class="{% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
             {% if item.items %}
             <ul>

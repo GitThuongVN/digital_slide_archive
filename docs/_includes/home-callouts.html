@@ -1,10 +1,10 @@
 {% for callout in page.callouts %}
 <div class="column {% cycle 'primary', 'gray', 'secondary' %}">
   <div class="content">
-    <div class="callout-text">
-      <h2>{{ callout.heading }}</h2>
+    <div class="callout-text">    
+      <h2>{{ callout.heading | replace: 'Documentation', 'Tài liệu' | replace: 'Success Stories', 'Câu chuyện thành công' | replace: 'Papers & Publications', 'Bài báo & Ấn phẩm' }}</h2>
       <a class="button is-medium {% cycle 'is-primary', 'is-gray', 'is-secondary' %} is-outlined is-inverted" href="{{ callout.link }}">
-        {{ callout.link_text }}
+        {{ callout.link_text | replace: 'Use Cases & Examples', 'Trường hợp sử dụng & Ví dụ' | replace: 'View Stories', 'Xem các câu chuyện' | replace: 'Read Papers', 'Đọc các bài báo' }}
       </a>
     </div>
     <div class="callout-image">

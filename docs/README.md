@@ -1,10 +1,10 @@
-# GitHub Pages Landing Page
-This website uses the [Bulma Clean Theme](https://github.com/chrisrhymes/bulma-clean-theme) for Jekyll.
+# Trang đích GitHub Pages
+Trang web này sử dụng [Giao diện Bulma Clean](https://github.com/chrisrhymes/bulma-clean-theme) cho Jekyll.
 
-### Running the site locally
-1. Open a terminal and clone the [digital_slide_archive](https://github.com/DigitalSlideArchive/digital_slide_archive) repo
-1. Navigate to the docs folder – `cd docs`
-1. Run the command `bundle exec jekyll serve`
-    * You may need to run `bundle install && bundle update` if this step fails. Once that is done, repeat step 3.
+### Chạy trang web cục bộ
+1. Mở terminal và clone repo [digital_slide_archive](https://github.com/DigitalSlideArchive/digital_slide_archive)
+2. Điều hướng đến thư mục docs – `cd docs`
+3. Chạy lệnh `bundle exec jekyll serve`
+    * Bạn có thể cần chạy `bundle install && bundle update` nếu bước này thất bại. Sau khi hoàn thành, hãy lặp lại bước 3.
 
-**NOTE:** You will see `Invalid theme folder: _sass` when you serve the site. It has to do with the use of the Bulma Clean Theme as a remote_theme in the `config.yml`. `remote_theme: chrisrhymes/bulma-clean-theme` is used instead of `theme: bulma-clean-theme` in order to make the theme play nicely with GitHub pages. Because of this, please ignore the Invalid theme folder warning.
+**LƯU Ý:** Bạn sẽ thấy `Invalid theme folder: _sass` khi chạy trang web. Điều này liên quan đến việc sử dụng Giao diện Bulma Clean dưới dạng `remote_theme` trong `config.yml`. `remote_theme: chrisrhymes/bulma-clean-theme` được sử dụng thay vì `theme: bulma-clean-theme` để giao diện hoạt động tốt với các trang GitHub. Vì vậy, hãy bỏ qua cảnh báo thư mục giao diện không hợp lệ.

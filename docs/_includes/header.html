@@ -1,11 +1,66 @@
 
-<nav class="navbar" >
+<nav class="navbar">
     <div class="container">
         <div class="navbar-brand">
             {% if site.logo_image %}
             <img src="{{ site.logo_image | prepend: site.baseurl }}" width="90">
             {% endif %}
-            <a href="{{ site.baseurl }}index.html" class="navbar-item">
+            <a href="{{ site.baseurl }}index.html" class="navbar-item"> {{ site.title }} </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-end">
+                {% if site.data.navigation %}
+                {% for item in site.data.navigation %}
+                {% if item.dropdown %}
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                    <div class="navbar-dropdown">
+                        {% for subitem in item.dropdown %}
+                        <a href="{{ subitem.link | prepend: site.baseurl }}"
+                            class="navbar-item {% if subitem.link == page.url %}is-active{% endif %}">
+                            {{ subitem.name }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% else %}
+                <a href="{{ item.link | prepend: site.baseurl }}"
+                    class="navbar-item {% if item.link == page.url %}is-active{% endif %}">{{ item.name }}</a>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+
+                {% if site.data.contact_links %}
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">Liên hệ</a>
+                  <div class="navbar-dropdown">
+                    {% for item in site.data.contact_links %}
+                    <a href="{{ item.link }}" class="navbar-item">
+                      {{ item.name }}
+                    </a>
+                    {% endfor %}
+                  </div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</nav>
+<style>
+    /* temporary fix, have to move this to style sheet */
+    html {
+        scroll-behavior: smooth
+    }
+</style>
+
+
                 {{ site.title }}
             </a>
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">

@@ -3,26 +3,26 @@
         {% for publication in page.publications %}
         <div class="citation">
           <div class="citation-text column is-11">
-            <h4>{{ publication.title }}</h4>
-            <p>{{ publication.full-citation }}
+            <h4>{{ publication.title }}</h4> 
+            <p>{{ publication.full-citation }}</p>
             {% if publication.DOI_link %}
             <a href="{{ publication.DOI_link }}">
-              {{ publication.DOI_link }}
-            </a></p>
+              Liên kết DOI: {{ publication.DOI_link }}
+            </a>
             {% else %}
             <a href="{{ publication.link }}">
-              {{ publication.link_text }}
-            </a></p>
+                {{ publication.link_text }}
+              </a>
             {% endif %}
-            <div class="citation-numbers">
+            <div class="citation-numbers"> 
               {% if publication.PMID %}
-              PMID: {{ publication.PMID }} <br>
+              PMID: {{ publication.PMID }}<br>
               {% endif %}
               {% if publication.DOI %}
               DOI: {{ publication.DOI }}
               {% endif %}
             </div>
-          </div>
+          </div> 
           <div class="citation-link-icon column is-1">
             <a href="{{ publication.link }}">
               <i class="fas fa-external-link-alt fa-2x"></i>

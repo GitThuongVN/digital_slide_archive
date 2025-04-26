@@ -1,52 +1,52 @@
-Migration Guide
-===============
+Hướng dẫn Di chuyển
+===================
 
-This document is intended to help transition between major versions of the Digital Slide Archive.  The current installation method uses ``docker compose`` and is based on Girder 3.x.
+Tài liệu này nhằm giúp chuyển đổi giữa các phiên bản chính của Digital Slide Archive. Phương pháp cài đặt hiện tại sử dụng ``docker compose`` và dựa trên Girder 3.x.
 
-From deploy_docker.py to docker compose
----------------------------------------
+Từ deploy_docker.py sang docker compose
+-----------------------------------------
 
-Prior to 2021, the Digital Slide Archive used the ``deploy_docker.py`` script.  If you have deployed the software via another means, these instructions will need some adjustments.
+Trước năm 2021, Digital Slide Archive sử dụng script ``deploy_docker.py``. Nếu bạn đã triển khai phần mềm bằng phương tiện khác, những hướng dẫn này sẽ cần một số điều chỉnh.
 
-The ``deploy_docker.py`` script was developed prior to docker compose handling all of the desired features.  If you are using command line options on ``deploy_docker.py``, you will need to figure out how each of those translates to the docker compose notation.  For the default deployment without any command line options, you can switch by doing::
+Script ``deploy_docker.py`` được phát triển trước khi docker compose xử lý tất cả các tính năng mong muốn. Nếu bạn đang sử dụng các tùy chọn dòng lệnh trên ``deploy_docker.py``, bạn sẽ cần tìm hiểu xem mỗi tùy chọn đó được chuyển đổi như thế nào sang ký pháp docker compose. Đối với triển khai mặc định không có bất kỳ tùy chọn dòng lệnh nào, bạn có thể chuyển đổi bằng cách thực hiện::
 
     chown -R $(id -u):$(id -g) ~/.dsa
 
-The, add ``docker-compose.override.yml`` to the ``devops/dsa`` directory, replacing ``/home/ubuntu`` with the resolution of ``~``::
+Sau đó, thêm ``docker-compose.override.yml`` vào thư mục ``devops/dsa``, thay thế ``/home/ubuntu`` bằng độ phân giải của ``~``::
 
     ---
     services:
       girder:
         volumes:
-          - /home/ubuntu/.dsa/assetstore:/opt/digital_slide_archive/assetstore
-          - /home/ubuntu/.dsa/logs:/logs
+          - /home/ubuntu/.dsa/assetstore:/opt/digital_slide_archive/assetstore # assetstore là thư mục lưu trữ dữ liệu
+          - /home/ubuntu/.dsa/logs:/logs #logs là thư mục chứa các logs của hệ thống
       mongodb:
         volumes:
-          - /home/ubuntu/.dsa/db:/data/db
+          - /home/ubuntu/.dsa/db:/data/db #db là thư mục chứa database
 
-Now, from the ``devops/dsa`` directory, ``docker compose`` will work.
+Bây giờ, từ thư mục ``devops/dsa``, ``docker compose`` sẽ hoạt động.
 
 
-From Girder 2.x and the HistomicsTK Repository
-----------------------------------------------
+Từ Girder 2.x và Kho lưu trữ HistomicsTK
+-------------------------------------------
 
-The Digital Slide Archive deployment was originally included as part of the HistomicsTK repository and used Girder 2.x as the underlying server.  To migrate from a Girder 2.x instance to the version in this repository, no special changes are needed -- just use the current ``deploy_docker.py`` script from this repository.
+Việc triển khai Digital Slide Archive ban đầu được bao gồm như một phần của kho lưu trữ HistomicsTK và sử dụng Girder 2.x làm máy chủ cơ bản. Để di chuyển từ phiên bản Girder 2.x sang phiên bản trong kho lưu trữ này, không cần thay đổi đặc biệt nào -- chỉ cần sử dụng script ``deploy_docker.py`` hiện tại từ kho lưu trữ này.
 
 Mongo
 -----
 
-By default, the latest major version of MongoDB is used.  However, Mongo does not automatically upgrade the database files to work with more than one major version beyond the last update.  For instance, a database created in Mongo 3.4 will work with Mongo 3.6 but not Mongo 4.0.
+Theo mặc định, phiên bản chính mới nhất của MongoDB được sử dụng. Tuy nhiên, Mongo không tự động nâng cấp các file cơ sở dữ liệu để hoạt động với nhiều phiên bản chính hơn ngoài bản cập nhật cuối cùng. Ví dụ: cơ sở dữ liệu được tạo trong Mongo 3.4 sẽ hoạt động với Mongo 3.6 nhưng không hoạt động với Mongo 4.0.
 
-If you have a running instance of the Digital Slide Archive, you can find out what version of Mongo the database is compatible to by issuing the command::
+Nếu bạn có một phiên bản đang chạy của Digital Slide Archive, bạn có thể tìm hiểu phiên bản Mongo nào tương thích với cơ sở dữ liệu bằng cách đưa ra lệnh::
 
   docker exec histomicstk_mongodb mongo girder --eval \
   'db.adminCommand({getParameter: 1, featureCompatibilityVersion: 1})'
 
-If this isn't the current version of Mongo, you can upgrade the database's compatibility version.  For instance, the command::
+Nếu đây không phải là phiên bản Mongo hiện tại, bạn có thể nâng cấp phiên bản tương thích của cơ sở dữ liệu. Ví dụ: lệnh::
 
   docker exec histomicstk_mongodb mongo girder --eval \
   'db.adminCommand({setFeatureCompatibilityVersion: "4.2"})'
 
-would upgrade to Mongo 4.2.
+sẽ nâng cấp lên Mongo 4.2.
 
-You can start the Digital Slide Archive with an older version of Mongo by specifying the version in your ``docker-compose.override.yml`` file as part of the mongo container's image name.  If your database is old enough, you might need to move one major version at a time, adjusting the compatibility version each time.
+Bạn có thể khởi động Digital Slide Archive với phiên bản Mongo cũ hơn bằng cách chỉ định phiên bản trong file ``docker-compose.override.yml`` của bạn như một phần của tên image của container mongo. Nếu cơ sở dữ liệu của bạn đủ cũ, bạn có thể cần phải di chuyển mỗi lần một phiên bản chính, điều chỉnh phiên bản tương thích mỗi lần.

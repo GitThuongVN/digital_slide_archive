@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "Developing Machine-Learning Tools Through Collaborative Annotation Studies"
-description: "The primary determinant in machine learning algorithm performance is the availability of abundant labeled data for training ..."
+title:  "Phát triển các công cụ Máy học thông qua Nghiên cứu Chú thích Hợp tác"
+description: "Yếu tố quyết định chính trong hiệu suất của thuật toán học máy là sự sẵn có của dữ liệu được gắn nhãn phong phú để đào tạo ..."
 hero_image: assets/img/demo-images/DSA_Demo_Image.png
 ---
 
@@ -9,17 +9,17 @@ hero_image: assets/img/demo-images/DSA_Demo_Image.png
 
 ![](../../assets/img/demo-images/DSA_Demo_Image.png){:width="480px" height="auto" .box.nested.is-right}
 
-## The Story
+## Câu chuyện
 
-The primary determinant in machine learning algorithm performance is the availability of abundant labeled data for training. Collecting data for applications like tissue region segmentation and cell classification is challenging given the limited availability of experts and tools needed to collect and review annotations.
+Yếu tố quyết định chính trong hiệu suất của thuật toán học máy là sự sẵn có của dữ liệu được gắn nhãn phong phú để đào tạo. Việc thu thập dữ liệu cho các ứng dụng như phân đoạn vùng mô và phân loại tế bào là một thách thức do sự hạn chế về số lượng chuyên gia và công cụ cần thiết để thu thập và xem xét các chú thích.
 
-Our web-based platform enables users to collaborate all over the world, and has been used to generate over 120,000 human markups of histopathology in multiple annotation studies.
+Nền tảng dựa trên web của chúng tôi cho phép người dùng cộng tác trên khắp thế giới và đã được sử dụng để tạo ra hơn 120.000 đánh dấu histopathology của con người trong nhiều nghiên cứu chú thích.
 
-Our API and user roles allow us to create collaborative annotation study teams that engage users with different expertise levels, ranging from pathologists to medical students, to collaboratively generate large and extensively reviewed annotation datasets. In a study with over 25 participants from over 5 countries, we generated over 25,000 annotated tissue regions to generate the richest public dataset of annotated breast-cancer tissues to date. The ability to programmatically monitor and manage these studies through the API is key to their success.
+API và vai trò người dùng của chúng tôi cho phép chúng tôi tạo ra các nhóm nghiên cứu chú thích hợp tác, thu hút người dùng với các trình độ chuyên môn khác nhau, từ bác sĩ bệnh lý đến sinh viên y khoa, để cùng nhau tạo ra các bộ dữ liệu chú thích lớn và được xem xét rộng rãi. Trong một nghiên cứu với hơn 25 người tham gia từ hơn 5 quốc gia, chúng tôi đã tạo ra hơn 25.000 vùng mô được chú thích để tạo ra bộ dữ liệu công khai phong phú nhất về các mô ung thư vú được chú thích cho đến nay. Khả năng giám sát và quản lý các nghiên cứu này một cách có lập trình thông qua API là chìa khóa thành công của chúng.
 
-Collecting data on this scale allows us to generate highly accurate machine-learning models for tasks like tissue segmentation and cell classification and detection, and to understand the limits of concordance among human experts. The data from the collaborative annotation study is available on a demo instance of the Digital Slide Archive. The link goes to one of the TCGA slides that was used in the study. If you click the "eye" image icon in the Annotations panel on the right side of the screen, you'll see the results of a collaborative annotation.
+Việc thu thập dữ liệu trên quy mô này cho phép chúng tôi tạo ra các mô hình máy học có độ chính xác cao cho các tác vụ như phân đoạn mô và phân loại và phát hiện tế bào, đồng thời hiểu được giới hạn của sự phù hợp giữa các chuyên gia. Dữ liệu từ nghiên cứu chú thích hợp tác có sẵn trên một phiên bản demo của Digital Slide Archive. Liên kết sẽ dẫn đến một trong các slide TCGA đã được sử dụng trong nghiên cứu. Nếu bạn nhấp vào biểu tượng hình ảnh "con mắt" trong bảng Chú thích ở bên phải màn hình, bạn sẽ thấy kết quả của một chú thích hợp tác.
 
-[View Dataset Visualization](https://demo.kitware.com/histomicstk/histomicstk#?image=5bbdee4fe629140048d01adf&bounds=25823%2C19101%2C43534%2C29208%2C0){: .button.is-primary.is-medium}
+[Xem trực quan hóa tập dữ liệu](https://demo.kitware.com/histomicstk/histomicstk#?image=5bbdee4fe629140048d01adf&bounds=25823%2C19101%2C43534%2C29208%2C0){: .button.is-primary.is-medium}
 
 </div>
 
@@ -27,7 +27,7 @@ Collecting data on this scale allows us to generate highly accurate machine-lear
 
 <div class="story-references" markdown="1">
 
-### References
+### Tài liệu tham khảo
 
 Chandradevan, Ramraj, Ahmed A. Aljudi, Bradley R. Drumheller, Nilakshan Kunananthaseelan, Mohamed Amgad, David A. Gutman, Lee A. D. Cooper, and David L. Jaye. “Machine-Based Detection and Classification for Bone Marrow Aspirate Differential Counts: Initial Development Focusing on Nonneoplastic Cells.” Laboratory Investigation 100, no. 1 (September 30, 2019): 98–109. [https://doi.org/10.1038/s41374-019-0325-7](https://doi.org/10.1038/s41374-019-0325-7)
 

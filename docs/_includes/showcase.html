@@ -2,7 +2,7 @@
     {% assign showcase = site.data.[page.showcase] %}
 
     <div class="content">
-        <p>{{ showcase.intro | markdownify }}</p>
+        <p>{{ showcase.intro | markdownify | replace: 'What', 'Điều gì' | replace: 'Discover', 'Khám phá' | replace: 'These are', 'Đây là' | replace: 'is', 'là' }}</p>
     </div>
 
     {% for item in showcase.items %}
@@ -13,7 +13,7 @@
             <div class="showcase-content">
                 <div class="columns is-centered">
                     <div class="column is-8-desktop is-12-tablet">
-                        <p class="title">{{ item.title }}</p>
+                        <p class="title">{{ item.title | replace: 'Overview', 'Tổng quan' | replace: 'Features', 'Tính năng' | replace: 'Screenshots', 'Ảnh chụp màn hình' | replace: 'Details', 'Chi tiết' | replace: 'Demo', 'Bản demo' }}</p>
                         <p class="subtitle">{{ item.subtitle }}</p>
 
                         {% if item.github %}
@@ -31,7 +31,7 @@
                         {% endif %}
 
                         <div class="content">
-                            <p>{{ item.description | markdownify }}</p>
+                            <p>{{ item.description | markdownify | replace: 'This', 'Điều này' | replace: 'We', 'Chúng tôi' | replace: 'is', 'là' | replace: 'our', 'của chúng tôi' | replace: 'provides', 'cung cấp' | replace: 'collection', 'bộ sưu tập' | replace: 'discover', 'khám phá' | replace: 'See', 'Xem' }}</p>
                         </div>
 
                         {% if item.features %}
@@ -47,14 +47,14 @@
                         {% assign tags = item.tags | split: "," %}
                         <div class="tags is-centered">
                             {% for tag in tags %}
-                            <div class="tag is-dark">{{ tag }}</div>
+                            <div class="tag is-dark">{{ tag | replace: 'Open Source', 'Mã nguồn mở' | replace: 'Python', 'Python' | replace: 'Jupyter', 'Jupyter' | replace: 'Web Based', 'Dựa trên web' }}</div>
                             {% endfor %}
                         </div>
                         {% endif %}
 
                         <a href="{{ item.link }}" class="button is-primary">
-                            {{ item.link_text }}
-                        </a>
+                            {{ item.link_text | replace: 'View Code', 'Xem code' | replace: 'Live Demo', 'Demo trực tiếp' | replace: 'View', 'Xem' | replace: 'Install', 'Cài đặt' | replace: 'Learn More', 'Tìm hiểu thêm' | replace: 'Launch', 'Khởi chạy' }}
+                       </a>
                     </div>
                 </div>
 

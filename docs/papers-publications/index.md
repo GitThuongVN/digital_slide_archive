@@ -4,8 +4,8 @@ permalink: /papers-publications/
 
 # Banner Content
 # =================================
-title: Papers and Publications
-subtitle: A mix of papers that were published by contributors to the Digital Slide Archive and by unaffiliated researchers who have found the system to be useful in their work.
+title: Bài Báo và Ấn Phẩm
+subtitle: Tổng hợp các bài báo được xuất bản bởi những người đóng góp cho Digital Slide Archive và bởi các nhà nghiên cứu độc lập, những người đã thấy hệ thống hữu ích trong công việc của họ.
 hero_image: assets/img/home-callouts/papers_publications.jpg
 
 # Papers and Publications list

@@ -1,29 +1,29 @@
 <div class="columns">
   <div class="column is-9">
-      <h2>{{ page.about_title }}</h2>
-      <p>{{ page.about_text }}<span>:</span></p>
+      <h2>{{ page.about_title }}</h2> 
+      <p>{{ page.about_text }}<span>:</span></p> 
 
      {% if page.about_list %}
       <ul>
         {% for bullet in page.about_list %}
-        <li>{{ bullet.list_item }}</li>
+        <li>{{ bullet.list_item }}</li> 
         {% endfor %}
       </ul>
       {% endif %}
   </div>
   <div class="column is-1"></div>
-  <div class="resource-links column">
+  <div class="resource-links column"> 
       {% if page.about_resources %}
-      <h2>{{ page.about_resources_title }}</h2>
+      <h2>{{ page.about_resources_title }}</h2> 
       <ul>
         {% for resource in page.about_resources %}
-        <li class="column">
-          <a href="{{ resource.link }}">
+        <li class="column"> 
+          <a href="{{ resource.link }}"> 
             <i class="{{ resource.icon }} fa-2x"></i>
-            {{ resource.name }}
+            {{ resource.name }} 
           </a>
         </li>
-        {% endfor %}
+        {% endfor %} 
       </ul>
      {% endif %}
   </div>
@@ -31,15 +31,15 @@
 <div class="columns is-multiline is-left system-overview-section">
   {% if page.about_system_diagram %}
   <div class="column is-9">
-    <a href="{{ page.about_system_link }}">
-      <img src="{{ page.about_system_diagram | prepend: site.baseurl }}" class="feature-icon">
-    </a>
+    <a href="{{ page.about_system_link }}"> 
+      <img src="{{ page.about_system_diagram | prepend: site.baseurl }}" class="feature-icon"> 
+    </a> 
   </div>
   <div class="column is-9 has-text-centered">
-      {{ page.about_system_diagram_caption }}
-      <a href="{{ page.about_system_link }}">
-        {{ page.about_system_overview_page_button }}
-      </a>
+      {{ page.about_system_diagram_caption }} 
+      <a href="{{ page.about_system_link }}"> 
+        {{ page.about_system_overview_page_button }} 
+      </a> 
   </div>
   {% endif %}
 </div>

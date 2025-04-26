@@ -1,29 +1,29 @@
 {% for org in page.organizations %}
-<div class="column">
-  <div class="content">
-    <header class="org-header">
-      <h2 class="org-logo">
+<div class="cột">
+  <div class="nội dung">
+    <header class="tiêu-đề-tổ-chức">
+      <h2 class="logo-tổ-chức">
         <a href="{{ org.link }}">
           <img src="{{ org.logo }}" alt="{{ org.name }}">
         </a>
-        </h2>
+      </h2>
     </header>
-    <div class="org-members">
+    <div class="thành-viên-tổ-chức">
       {% for member in org.members %}
-      <div class="columns is-mobile is-vcentered member">
-        <div class="column is-one-quarter-desktop is-one-quarter-mobile headshot">
-          <div class="circle">
+      <div class="cột-dọc-thẳng-hàng is-mobile is-vcentered thành-viên">
+        <div class="cột is-one-quarter-desktop is-one-quarter-mobile ảnh-chân-dung">
+          <div class="hình-tròn">
             <a href="{{ member.link }}">
               <img src="{{ member.headshot }}">
             </a>
           </div>
         </div>
-        <div class="column member-info">
+        <div class="cột thông-tin-thành-viên">
           <a href="{{ member.link }}">
-            <h5 class="member-name">{{ member.name }}</h5>
+            <h5 class="tên-thành-viên">{{ member.name }}</h5>
           </a>
-          <span class="member-role">{{ member.role }}</span>
-          <span class="member-title">{{ member.title }}</span>
+          <span class="vai-trò-thành-viên">{{ member.role }}</span>
+          <span class="chức-danh-thành-viên">{{ member.title }}</span>
         </div>
       </div>
       {% endfor %}

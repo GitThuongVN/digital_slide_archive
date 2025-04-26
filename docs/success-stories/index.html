@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Success Stories
-subtitle: Read about some of the amazing outcomes that are being realized by our platform.
+title: Câu Chuyện Thành Công
+subtitle: Đọc về một số kết quả tuyệt vời đang được hiện thực hóa bởi nền tảng của chúng tôi.
 hero_image: assets/img/home-callouts/success_stories.jpg
 ---
 
@@ -14,11 +14,11 @@ hero_image: assets/img/home-callouts/success_stories.jpg
     </div>
     {% endif %}
     <div class="column is-three-quarters story-content">
-      <h2>{{ story.title }}</h2>
+      <h2>{{ story.title }}</h2> 
       {% if story.description %}
-      <p>{{ story.description }}</p>
+      <p>{{ story.description }}</p> 
       {% endif %}
-      <a href="{{ story.url | remove_first: '/' | prepend: site.baseurl }}" class="button is-primary is-medium">Read Full Story</a>
+      <a href="{{ story.url | remove_first: '/' | prepend: site.baseurl }}" class="button is-primary is-medium">Đọc Toàn Bộ Câu Chuyện</a>
     </div>
   </div>
   {% endfor %}

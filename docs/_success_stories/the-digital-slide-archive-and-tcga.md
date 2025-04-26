@@ -1,19 +1,19 @@
 ---
 layout: page
-title:  "The Digital Slide Archive and TCGA"
-description: "The Cancer Digital Slide Archive is a website that hosts whole-slide images of pathologic specimens associated with the TCGA studies ..."
+title:  "Kho lưu trữ Slide kỹ thuật số và TCGA"
+description: "Kho lưu trữ Slide kỹ thuật số về Ung thư là một trang web lưu trữ hình ảnh toàn trang của các mẫu vật bệnh lý liên quan đến các nghiên cứu TCGA ..."
 hero_image: assets/img/success-stories/story-image-1.png
 ---
 
 <div class="story-content is-clearfix" markdown="1">
 
-![](../../assets/img/success-stories/story-image-1.png){:width="480px" height="auto" .box.nested.is-right}
+![](../../assets/img/success-stories/story-image-1.png){:width="480px" height="auto" .box.nested.is-left}
 
-## The Story
+## Câu chuyện
 
-The Cancer Digital Slide Archive is a website that hosts whole-slide images of pathologic specimens associated with the TCGA studies. At over 10,000 images and 20 Terabytes, the CDSA has enabled a number of the TCGA Analysis Working Group Studies, as well as other investigator-driven studies that utilize the digital pathology images (see references).
+Kho lưu trữ Slide kỹ thuật số về Ung thư là một trang web lưu trữ hình ảnh toàn trang của các mẫu vật bệnh lý liên quan đến các nghiên cứu TCGA. Với hơn 10.000 hình ảnh và 20 Terabyte, CDSA đã hỗ trợ một số Nghiên cứu của Nhóm Công tác Phân tích TCGA, cũng như các nghiên cứu do nhà điều tra khác thực hiện sử dụng hình ảnh bệnh lý kỹ thuật số (xem tài liệu tham khảo).
 
-The Digital Slide Archive project builds on the success of our experience with the Cancer Digital Slide Archive, creating a software platform that allows users to create their own digital pathology servers to support data management and hosting for their own investigations.
+Dự án Kho lưu trữ Slide kỹ thuật số được xây dựng dựa trên thành công từ kinh nghiệm của chúng tôi với Kho lưu trữ Slide kỹ thuật số về Ung thư, tạo ra một nền tảng phần mềm cho phép người dùng tạo máy chủ bệnh lý kỹ thuật số của riêng họ để hỗ trợ quản lý dữ liệu và lưu trữ cho các nghiên cứu của chính họ.
 
 [View Demo Site](https://cancer.digitalslidearchive.org/){: .button.is-primary.is-medium}
 
@@ -21,7 +21,7 @@ The Digital Slide Archive project builds on the success of our experience with t
 
 ---
 
-<div class="story-references" markdown="1">
+<div class="story-references is-clearfix" markdown="1">
 
 ### References
 

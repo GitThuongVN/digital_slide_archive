@@ -4,17 +4,16 @@ permalink: /demos-examples/
 
 # Banner Content
 # =================================
-title: Demos and Examples
-subtitle: The best way to learn more about DSA is through the interactive demos and examples below.
+title: Bản trình diễn và Ví dụ
+subtitle: Cách tốt nhất để tìm hiểu thêm về DSA là thông qua các bản trình diễn tương tác và ví dụ dưới đây.
 hero_image: assets/img/home-callouts/demos_examples.jpg
 
 # Demos
 # =================================
 demos:
  - title: Digital Slide Archive
-   description: "The data from the collaborative annotation study is available on a demo instance of the Digital Slide Archive. The link goes to one of the TCGA slides that was used in the study. If you click the"
-   description2: "image icon in the Annotations panel on the right side of the screen, you'll see the results of a collaborative annotation."
+   description: "Dữ liệu từ nghiên cứu chú thích cộng tác có sẵn trên bản demo của Digital Slide Archive. Liên kết này dẫn đến một trong các slide TCGA đã được sử dụng trong nghiên cứu. Nếu bạn nhấp vào"
+   description2: "biểu tượng hình ảnh trong bảng Chú thích ở phía bên phải màn hình, bạn sẽ thấy kết quả của một chú thích cộng tác."
    link: https://demo.kitware.com/histomicstk/histomicstk#?image=5bbdee4fe629140048d01adf&bounds=25823%2C19101%2C43534%2C29208%2C0
-   link_text: View Demo
+   link_text: Xem bản trình diễn
    image: assets/img/demo-images/DSA_Demo_Image.png
----
