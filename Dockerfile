@@ -74,7 +74,7 @@ RUN cd /opt && \
     pip install --no-cache-dir -e .[girder,worker] && \
     \
     cd /opt && \
-    git clone https://github.com/DigitalSlideArchive/import-tracker.git && \
+    git clone https://github.com/GitThuongVN/import-tracker.git && \
     cd /opt/import-tracker && \
     pip install --no-cache-dir -e . && \
     \
@@ -91,7 +91,7 @@ RUN cd /opt && \
     rdfind -minsize 32768 -makehardlinks true -makeresultsfile false /opt/venv && \
     \
     cd /opt && \
-    git clone https://github.com/DigitalSlideArchive/HistomicsUI && \
+    git clone https://github.com/GitThuongVN/HistomicsUI && \
     cd /opt/HistomicsUI && \
     pip install --no-cache-dir -e .[analysis] && \
     \

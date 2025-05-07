@@ -168,7 +168,7 @@ RUN cd /opt && \
     true
 
 RUN cd /opt && \
-    git clone -b girder-5 https://github.com/DigitalSlideArchive/HistomicsUI && \
+    git clone -b girder-5 https://github.com/GitThuongVN/HistomicsUI && \
     cd /opt/HistomicsUI && \
     # Unpin since we are using local installs \
     sed -i 's/==1\.3.*'\''/'\''/g' setup.py && \
@@ -185,7 +185,7 @@ RUN cd /opt && \
     true
 
 RUN cd /opt && \
-    git clone -b girder-5 https://github.com/DigitalSlideArchive/girder_assetstore && \
+    git clone -b girder-5 https://github.com/GitThuongVN/girder_assetstore && \
     cd /opt/girder_assetstore && \
     pip install --no-cache-dir -e . && \
     cd /opt/girder_assetstore/girder_assetstore/web_client && \
